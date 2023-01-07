@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "name": "my-project",
+  "builds": [
+    {
+      "src": "index.js",
+      "use": "@vercel/node",
+      "config": {
+        "env": {
+          "NODE_ENV": "production"
+        },
+        "framework": "express"
+      }
+    }
+  ]
+}
