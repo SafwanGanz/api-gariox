@@ -1,21 +1,27 @@
 {
   "version": 2,
+  "name": "my-project",
   "builds": [
     {
-      "src": "package.json",
+      "src": "api.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "main.js",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
-      "src": "/(.*)",
-      "dest": "/index.js"
+      "src": "/api/*",
+      "dest": "api.js"
+    },
+    {
+      "src": "/*",
+      "dest": "main.js"
     }
   ],
   "env": {
     "NODE_ENV": "production"
-  },
-  "scripts": {
-    "start": "npm start"
   }
 }
