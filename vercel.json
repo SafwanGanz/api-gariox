@@ -11,6 +11,9 @@
       "use": "@vercel/node"
     }
   ],
+  "scripts": {
+   "start": "npm start"
+    }
   "routes": [
     {
       "src": "/api/*",
