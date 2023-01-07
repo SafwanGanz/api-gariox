@@ -1,16 +1,21 @@
 {
   "version": 2,
-  "name": "my-project",
   "builds": [
     {
-      "src": "index.js",
-      "use": "@vercel/node",
-      "config": {
-        "env": {
-          "NODE_ENV": "production"
-        },
-        "framework": "express"
-      }
+      "src": "package.json",
+      "use": "@vercel/node"
     }
-  ]
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/index.js"
+    }
+  ],
+  "env": {
+    "NODE_ENV": "production"
+  },
+  "scripts": {
+    "start": "npm start"
+  }
 }
